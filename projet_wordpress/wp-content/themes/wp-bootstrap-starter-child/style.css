@@ -3,3 +3,18 @@
 	Template: wp-bootstrap-starter
 	*/
 	@import url("../wp-bootstrap-starter/style.css");
+
+
+body{
+	background: #ffffff;
+	background-color: #ffffff;
+}
+#masthead{
+	background-color: #152470;
+}
+#content.site-content{
+	padding-top: 2.125rem;
+}
+h3{
+	    font-size: 1rem;
+}
