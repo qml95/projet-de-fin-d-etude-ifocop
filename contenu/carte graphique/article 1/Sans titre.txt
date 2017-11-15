@@ -1,0 +1,69 @@
+Carte graphique MSI GeForce GTX 1050 Ti Gaming X - 4 Go
+
+189,95€ TTC
+
+
+MSI nous propose son nouveau modèle de carte graphique gamer milieu de gamme : la GTX 1050 Ti Gaming X 4 Go ! Avec son prix contenu, ses 768 coeurs CUDA, 4 Go de mémoire et son refroidissement d'exception MSI Twin Frozr VI : la GTX 1050 Ti dispose de tous les atouts pour les gamers en recherche de puissance pour un prix léger. Avec cette GTX 1050 Ti 4 Go MSI bénéficiez d'une carte graphique à la pointe de la technologie, équipée du nouveau système de refroidissement exclusif MSI Twin Frozr VI, prête à affronter tous vos jeux PC et performante !
+
+NVIDIA Geforce GTX 1050 Ti
+
+MSI GTX 1050 Ti Gaming X : jouez !
+Déclinaison logique de la gamme NVIDIA, la MSI GeForce GTX 1050 Ti (GeForce GTX 1050 Ti GAMING X 4G) arrive avec des mensurations taillées pour le jeu PC ! Armée de ses 768 coeurs CUDA, la nouvelle puce NVIDIA Pascal de la GTX 1050 Ti affiche une fréquence turbo à 1493 MHz (en mode OC) !
+
+Concernant la mémoire : la GTX 1050 Ti embarque 4 Go de mémoire GDDR5. Le mode NVIDIA GPU Boost 3.0 est aussi de la partie pour un surplus de puissance disponible quand vos jeux les plus gourmands l'exigeront ! Soyez immergés dans vos jeux et jouez en haute résolution jusqu'à 7680 x 4320 px à 60 Hz.
+
+Découvrez la GTX 1050 Ti au design Gaming X signé MSI. Elle dispose de 3 sorties vidéo : 1 ports DisplayPort 1.4, 1 port HDMI 2.0 ainsi qu'un classique port DVI-D ! Cette GTX 1050 Ti (GeForce GTX 1050 Ti GAMING X 4G) de haute volée MSI débarque avec un double système de refroidissement Twin Frozr VI ! Il dispose de nouveaux caloducs maximisant le transfert de chaleur pour un refroidissement toujours plus efficace, de ventilateurs courbés (Torx Fan 2.0) accélérant le flux d'air et du mode Zoro Frozr qui arrêtera la ventilation quand la charge de la carte le permettra ! Vous pourrez prendre le contrôle de votre carte graphique grâce au logiciel MSI Gaming App.
+
+NVIDIA GeForce GTX 1050 Ti Gaming X MSI
+GeForce Experience : votre compagnon de jeu idéal !
+Quand le jeu PC devient un "jeu d'enfant" ! GeForce Experience s'occupe de tout et vous assistera si vous le souhaitez dans les paramétrages de vos jeux !
+- Installez le logiciel gratuit GeForce Experience et bénéficiez d'une expérience de jeu parfaite en toute simplicité ! Avec NVIDIA GeForce Experience, soyez alertés dès la disponibilité de nouveaux pilotes qui s'installeront en 1 clic !
+- Optimisez automatiquement les régalages graphiques de vos jeux.
+- Enregistrez vos meilleurs moments dans vos jeux grâce à ShadowPlay et partagez ou diffusez vos parties sur Twitch ou autre !
+- GeForce Experience vous permettra de "streamer" vos jeux PC sur votre console portable NVIDIA Shield ou votre console de salon Shield Android TV !
+
+
+
+ CHIPSET GRAPHIQUE
+Référence constructeur	GeForce GTX 1050 Ti GAMING X 4G
+Marque du chipset	NVIDIA
+Puce graphique	GeForce GTX 1050 Ti
+Nom de code de la puce	Pascal
+Fréquence	1354 MHz (1290 MHz en mode Silent / 1379 MHz en mode OC)
+Unités de calcul	768
+NVIDIA GPU Boost 3.0 Technology	Oui
+Fréquence avec Boost	1468 MHz (1392 MHz en mode Silent / 1493 MHz en mode OC)
+Interface	PCI-Express 16x
+Version PCI-Express prise en charge	3.0
+Connecteur(s) d'alimentation PCI-Express	1 x 6 broches
+Dimensions de la carte	229 x 131 x 39 mm
+Puissance alimentation recommandée constructeur	300 Watts
+ MÉMOIRE
+Quantité mémoire	4 Go
+Type	G-DDR5
+Fréquence mémoire	7008 MHz Mode Gaming & Silent (7108 MHz mode OC)
+Largeur de bus	128 bits
+ UTILISATIONS TYPIQUES
+Utilisation	Jeux avancés
+Utilisation secondaire	Jeux
+ ENTRÉES/SORTIES
+Nombre de prises DVI	1
+Type de DVI	DVI-D
+Compatible Dual-Link	Oui, une
+Compatible HDCP	Oui
+Nombre de prises HDMI	1 (HDMI 2.0)
+DisplayPort	1 (version 1.4)
+Nombre maximal d'écrans	3 écrans
+ TECHNOLOGIES
+VR Ready	Non
+DirectX	12
+OpenGL	4.5
+Refroidissement silencieux (passif)	Non
+Système de refroidissement	MSI TWIN FROZR VI
+Type de refroidissement	Ventilateur sur 2 slots
+SLI	Non
+PhysX	Oui
+Low-Profile	Non
+ ACCESSOIRES
+Accessoires fournis	Driver
+Guide d'installation

@@ -6,11 +6,11 @@
 
 
 body{
-	background: #ffffff;
-	background-color: #ffffff;
+	background: #ffffff!important;
+
 }
 #masthead{
-	background-color: #152470;
+	background-color: #152470 !important;
 }
 #content.site-content{
 	padding-top: 2.125rem;
