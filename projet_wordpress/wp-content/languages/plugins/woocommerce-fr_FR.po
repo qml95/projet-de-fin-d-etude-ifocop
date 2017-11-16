@@ -2,14 +2,17 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-11-14 13:56:03+0000\n"
+"PO-Revision-Date: 2017-11-16 11:25+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"X-Generator: Poedit 2.0.4\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - WooCommerce - Stable (latest release)\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 
 #: includes/widgets/class-wc-widget-recently-viewed.php:25
 msgid "Recent Viewed Products"
@@ -9357,7 +9360,7 @@ msgstr "Avis (%d)"
 #: templates/checkout/form-shipping.php:63
 #: templates/single-product/tabs/additional-information.php:25
 msgid "Additional information"
-msgstr "Informations complémentaires"
+msgstr "Fiche technique"
 
 #: includes/wc-template-functions.php:845
 msgid "Sort by price: high to low"
@@ -18157,7 +18160,6 @@ msgstr "Stock de l&rsquo;article %1$s augmenté de %2$s à %3$s."
 msgid "Order status changed from %1$s to %2$s."
 msgstr "État de la commande modifié de %1$s à %2$s."
 
-#. #-#-#-#-#  woocommerce-code.pot (WooCommerce 3.2.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: includes/admin/class-wc-admin-assets.php:89
 #: includes/admin/class-wc-admin-menus.php:60
