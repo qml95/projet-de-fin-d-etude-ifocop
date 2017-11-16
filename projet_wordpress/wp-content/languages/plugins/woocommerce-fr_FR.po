@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-10-25 08:08:48+0000\n"
+"PO-Revision-Date: 2017-11-14 13:56:03+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -152,7 +152,7 @@ msgstr "Position"
 
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:324
 msgid "Upload a new file"
-msgstr "Mettre en ligne un nouveau fichier"
+msgstr "Téléverser un nouveau fichier"
 
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:320
 msgid "The file is empty or using a different encoding than UTF-8, please try again with a new file."
@@ -1019,7 +1019,7 @@ msgstr "Publié"
 
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:301
 msgid "Please upload or provide the link to a valid CSV file."
-msgstr "Veuillez mettre en ligne ou fournir le lien vers un fichier CSV valide."
+msgstr "Veuillez téléverser ou fournir le lien vers un fichier CSV valide."
 
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:262
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:295
@@ -1028,7 +1028,7 @@ msgstr "Type de fichier invalide. L&rsquo;importateur prend en charge les format
 
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:257
 msgid "File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini."
-msgstr "Ce fichier est vide. Veuillez mettre en ligne quelque chose de plus substantiel. Cette erreur peut également être due à la désactivation de l&rsquo;envoi de fichier dans le fichier php.ini de votre serveur, ou par une valeur de post_max_size inférieure à celle de upload_max_filesize dans ce même php.ini."
+msgstr "Ce fichier est vide. Veuillez téléverser quelque chose de plus substantiel. Cette erreur peut également être due à la désactivation de l&rsquo;envoi de fichier dans le fichier php.ini de votre serveur, ou par une valeur de post_max_size inférieure à celle de upload_max_filesize dans ce même php.ini."
 
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:96
 msgid "Done!"
@@ -1040,7 +1040,7 @@ msgstr "Mappage colonne"
 
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:81
 msgid "Upload CSV file"
-msgstr "Mettre en ligne un fichier CSV"
+msgstr "Téléverser un fichier CSV"
 
 #: includes/admin/helper/views/html-section-nav.php:4
 #: includes/admin/views/html-admin-page-addons.php:15
@@ -5010,7 +5010,7 @@ msgstr "Filtrer les produits"
 
 #: includes/class-wc-post-types.php:282
 msgid "Uploaded to this product"
-msgstr "Mis en ligne sur ce produit"
+msgstr "Téléversé sur ce produit"
 
 #: includes/class-wc-post-types.php:281
 msgid "Insert into product"
@@ -12910,7 +12910,7 @@ msgstr "La plus grande taille de fichier qui peut être uploadée sur votre inst
 
 #: includes/api/class-wc-rest-system-status-controller.php:219
 msgid "Max upload size."
-msgstr "Taille maximale d&rsquo;upload."
+msgstr "Taille maximale de téléversement."
 
 #: includes/admin/views/html-admin-page-status-report.php:179
 msgid "The version of MySQL installed on your hosting server."
@@ -14664,7 +14664,7 @@ msgstr "Activé"
 
 #: includes/admin/meta-boxes/views/html-variation-admin.php:53
 msgid "Upload an image"
-msgstr "Transférer une image"
+msgstr "Téléverser une image"
 
 #: includes/admin/meta-boxes/views/html-variation-admin.php:53
 msgid "Remove this image"
@@ -15788,7 +15788,7 @@ msgstr "Désolé, il y a eu une erreur."
 
 #: includes/admin/importers/class-wc-tax-rate-importer.php:282
 msgid "Upload file and import"
-msgstr "Envoyer le fichier et importer"
+msgstr "Téléverser le fichier et importer"
 
 #: includes/admin/importers/class-wc-tax-rate-importer.php:276
 msgid "Delimiter"
@@ -16004,7 +16004,7 @@ msgstr "Supprimer image"
 #: includes/admin/class-wc-admin-taxonomies.php:105
 #: includes/admin/class-wc-admin-taxonomies.php:215
 msgid "Upload/Add image"
-msgstr "Transférer/Ajouter image"
+msgstr "Téléverser/Ajouter image"
 
 #: includes/admin/class-wc-admin-taxonomies.php:101
 #: includes/admin/class-wc-admin-taxonomies.php:210
@@ -17053,7 +17053,7 @@ msgstr "Étiquettes produits"
 
 #: includes/admin/class-wc-admin-pointers.php:169
 msgid "Upload or assign an image to your product here. This image will be shown in your store's catalog."
-msgstr "Mettez en ligne ou assignez une image à votre produit ici. Cette image sera affichée dans le catalogue de votre boutique."
+msgstr "Téléversez ou assignez une image à votre produit ici. Cette image sera affichée dans le catalogue de votre boutique."
 
 #: includes/admin/class-wc-admin-pointers.php:168
 #: includes/admin/settings/class-wc-settings-products.php:174
@@ -17124,7 +17124,7 @@ msgstr "produit"
 
 #: includes/admin/class-wc-admin-permalink-settings.php:135
 msgid "Enter a custom base to use. A base <strong>must</strong> be set or WordPress will use default instead."
-msgstr "Entrez une base personnalisé à utiliser. Une base <strong>doit</strong> être paramétrée ou WordPress utilisera la valeur par défault."
+msgstr "Saisissez une base personnalisée à utiliser. Une base <strong>doit</strong> être paramétrée ou WordPress utilisera celle par défaut."
 
 #: includes/admin/class-wc-admin-permalink-settings.php:133
 msgid "Custom base"
