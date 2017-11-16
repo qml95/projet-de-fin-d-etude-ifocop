@@ -18,12 +18,61 @@ body{
 h3{
 	    font-size: 1rem;
 }
+
+
+/*--------------------------------------------------------------------
+														partie NAV
+--------------------------------------------------------------------*/
 .amount{
 	margin-top: 8px !important;
 }
 .wpmenucart-icon-shopping-cart-0{
 	margin-left: 30px !important;
 }
+
+
+/*--------------------------------------------------------------------
+														partie page produits
+--------------------------------------------------------------------*/
 .in-stock{
 	color: green !important;
+}
+.product_title{
+	width: 380px !important;
+}
+.woocommerce-product-details__short-description{
+	width: 415px !important;
+}
+.product_meta{
+	display: none !important;
+}
+.wc-tabs{
+	width: 115% !important;
+}
+#tab-description{
+	width: 115% !important;
+}
+#tab-additional_information{
+	width: 115% !important;
+}
+.shop_attributes td{
+	text-align: right !important;
+}
+.flex-control-thumbs{
+	width: 190px !important;
+}
+.row{
+	width: 130% !important;
+	margin-left: -40px !important;
+}
+
+/*--------------------------------------------------------------------
+														partie page boutique
+--------------------------------------------------------------------*/
+.form-control{
+	height: 20px !important;
+	width: 195px !important;
+}
+.border-white{
+	margin-left: 0px !important;
 }
