@@ -47,13 +47,13 @@ h3{
 	display: none !important;
 }
 .wc-tabs{
-	width: 115% !important;
+	width: 100% !important;
 }
 #tab-description{
-	width: 115% !important;
+	width: 100% !important;
 }
 #tab-additional_information{
-	width: 115% !important;
+	width: 100% !important;
 }
 .shop_attributes td{
 	text-align: right !important;
@@ -75,4 +75,12 @@ h3{
 }
 .border-white{
 	margin-left: 0px !important;
+}
+
+/*--------------------------------------------------------------------
+														partie page boutique
+--------------------------------------------------------------------*/
+.woocommerce-account .woocommerce-MyAccount-content{
+	float: left;
+	width: 55%;
 }
