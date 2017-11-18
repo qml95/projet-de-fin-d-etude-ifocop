@@ -13,20 +13,38 @@ La technologie V-NAND 3D offre au SSD 850 EVO le summum des vitesse de lecture e
 
 
 Format	2,5"
+
 Capacité	250 Go
+
 Type de mémoire	V-NAND 3D
+
 Interface	SATA 3 (6 Gb/s)
+
 Protocole	AHCI
+
 Taux de transfert maximal en lecture	540 Mo/sec (SATA III 6 Gb/s)
+
 Taux de transfert maximal en écriture	520 Mo/sec (SATA III 6 Gb/s)
+
 Nombre max d'opérations par sec (IOPS) en lecture	97 000 (aléatoire sur fichiers de 4Ko)
+
 Nombre max d'opérations par sec (IOPS) en écriture	88 000 (aléatoire sur fichiers de 4 Ko)
+
  PRÉSENTATION
+
 Version boîte	Oui
+
 Accessoires fournis	Logiciel Magician
+
 Guide d'installation
+
+
 Dimensions	100 x 69,85 x 6,8 mm
+
 Poids	53 g
+
 Consommation	En fonctionnement : 2,1 W
+
 En veille : 0,5 W
+
 Référence constructeur	MZ-75E250B/EU

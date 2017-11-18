@@ -37,15 +37,27 @@ pour une tranquillité d'esprit lorsque vous mettez à niveau
 
  Format	2,5"
 Capacité	250 Go
+
 Type de mémoire	TLC (Triple-Level Cell)
+
 Interface	SATA 3 (6 Gb/s)
+
 Taux de transfert maximal en lecture	540 Mo/s
+
 Taux de transfert maximal en écriture	500 Mo/s
+
 Nombre max d'opérations par sec (IOPS) en lecture	97 000 (aléatoire sur fichiers de 4Ko)
+
 Nombre max d'opérations par sec (IOPS) en écriture	79 000 (aléatoire sur fichiers de 4Ko)
+
 MTBF	1,75 million d'heures
+
  PRÉSENTATION
+
 Version boîte	Oui
+
 Dimensions	100,20 x 69,85 x 7 mm
+
 Poids	37,4 g
+
 Référence constructeur	WDS250G1B0A

@@ -1,0 +1,17 @@
+Format	2,5"
+Capacité	240 Go
+Type de mémoire	TLC (Triple-Level Cell)
+Interface	SATA 3 (6 Gb/s)
+Protocole	AHCI
+Taux de transfert maximal en lecture	560 Mo/sec (SATA III 6 Gb/s)
+Taux de transfert maximal en écriture	450 Mo/sec (SATA III 6Gb/s)
+Nombre max d'opérations par sec (IOPS) en lecture	86 000 (aléatoire sur fichiers de 4Ko)
+Nombre max d'opérations par sec (IOPS) en écriture	80 000 (aléatoire sur fichiers de 4 Ko)
+MTBF	2 millions d'heures
+
+PRÉSENTATION
+Dimensions	100 x 70 x 7 mm
+Poids	45 g
+Consommation	Lecture/ecriture : 2,2W
+Inactif : 0,2 W
+Référence constructeur	SSD7CS900-240-PB

@@ -2,6 +2,8 @@ Carte graphique MSI GeForce GTX 1050 Ti Gaming X - 4 Go
 
 189,95€ TTC
 
+[table id=1 /]
+
 
 MSI nous propose son nouveau modèle de carte graphique gamer milieu de gamme : la GTX 1050 Ti Gaming X 4 Go ! Avec son prix contenu, ses 768 coeurs CUDA, 4 Go de mémoire et son refroidissement d'exception MSI Twin Frozr VI : la GTX 1050 Ti dispose de tous les atouts pour les gamers en recherche de puissance pour un prix léger. Avec cette GTX 1050 Ti 4 Go MSI bénéficiez d'une carte graphique à la pointe de la technologie, équipée du nouveau système de refroidissement exclusif MSI Twin Frozr VI, prête à affronter tous vos jeux PC et performante !
 
@@ -23,7 +25,6 @@ Quand le jeu PC devient un "jeu d'enfant" ! GeForce Experience s'occupe de tout 
 - GeForce Experience vous permettra de "streamer" vos jeux PC sur votre console portable NVIDIA Shield ou votre console de salon Shield Android TV !
 
 
-
  CHIPSET GRAPHIQUE
 Référence constructeur	GeForce GTX 1050 Ti GAMING X 4G
 Marque du chipset	NVIDIA
@@ -38,14 +39,13 @@ Version PCI-Express prise en charge	3.0
 Connecteur(s) d'alimentation PCI-Express	1 x 6 broches
 Dimensions de la carte	229 x 131 x 39 mm
 Puissance alimentation recommandée constructeur	300 Watts
+
  MÉMOIRE
 Quantité mémoire	4 Go
 Type	G-DDR5
 Fréquence mémoire	7008 MHz Mode Gaming & Silent (7108 MHz mode OC)
 Largeur de bus	128 bits
- UTILISATIONS TYPIQUES
-Utilisation	Jeux avancés
-Utilisation secondaire	Jeux
+
  ENTRÉES/SORTIES
 Nombre de prises DVI	1
 Type de DVI	DVI-D
@@ -54,7 +54,8 @@ Compatible HDCP	Oui
 Nombre de prises HDMI	1 (HDMI 2.0)
 DisplayPort	1 (version 1.4)
 Nombre maximal d'écrans	3 écrans
- TECHNOLOGIES
+ 
+TECHNOLOGIES
 VR Ready	Non
 DirectX	12
 OpenGL	4.5
@@ -64,6 +65,15 @@ Type de refroidissement	Ventilateur sur 2 slots
 SLI	Non
 PhysX	Oui
 Low-Profile	Non
- ACCESSOIRES
+ 
+ACCESSOIRES
 Accessoires fournis	Driver
 Guide d'installation
+
+
+
+
+
+ UTILISATIONS TYPIQUES
+Utilisation	Jeux avancés
+Utilisation secondaire	Jeux

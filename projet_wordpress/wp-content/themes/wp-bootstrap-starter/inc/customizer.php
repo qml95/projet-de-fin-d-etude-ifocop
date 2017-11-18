@@ -97,7 +97,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'header_bg_color_setting',
         array(
-            'default'     => '#563d7c',
+            'default'     => '#fff',
             'sanitize_callback' => 'sanitize_hex_color',
         )
     );
@@ -204,7 +204,7 @@ function wp_bootstrap_starter_customizer_css()
 {
     ?>
     <style type="text/css">
-        #page-sub-header { background: <?php echo get_theme_mod('header_bg_color_setting', '#563d7c'); ?>; }
+        #page-sub-header { background: <?php echo get_theme_mod('header_bg_color_setting', '#fff'); ?>; }
     </style>
     <?php
 }
