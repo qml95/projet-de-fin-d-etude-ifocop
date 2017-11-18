@@ -259,3 +259,93 @@ Stack trace:
 #4 {main}
   thrown
 
+2017-11-18T23:54:50+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+
+2017-11-18T23:54:51+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+
+2017-11-18T23:54:51+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+
+2017-11-18T23:54:51+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+
+2017-11-18T23:54:51+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+
+2017-11-18T23:54:51+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+
+2017-11-18T23:54:55+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+
+2017-11-18T23:55:02+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+
+2017-11-18T23:55:05+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+
+2017-11-18T23:55:05+00:00 CRITICAL Uncaught Error: Call to undefined function YIT_Pointers() in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/plugins/yith-woocommerce-compare/includes/class.yith-woocompare-admin.php:256
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(286): YITH_Woocompare_Admin->register_pointer('')
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-admin/admin-ajax.php(44): do_action('admin_init')
+#4 {main}
+  thrown
+

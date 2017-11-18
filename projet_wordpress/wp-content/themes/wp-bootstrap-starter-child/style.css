@@ -12,6 +12,7 @@ body{
 }
 #masthead{
 	background-color: #152470 !important;
+	height: 150px !important;
 }
 #content.site-content{
 	padding-top: 2.125rem;
@@ -30,7 +31,12 @@ h3{
 .wpmenucart-icon-shopping-cart-0{
 	margin-left: 30px !important;
 }
-
+.site-title{
+	font-size: 60px !important;
+}
+#yith_woocommerce_ajax_search-2{
+	margin-left: 55px !important;
+}
 
 /*--------------------------------------------------------------------
 														partie page produits
