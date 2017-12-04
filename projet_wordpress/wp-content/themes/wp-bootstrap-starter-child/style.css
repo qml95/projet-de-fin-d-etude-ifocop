@@ -11,7 +11,7 @@ body{
 
 }
 #masthead{
-	background-color: #152470 !important;
+	background-color: #152450 !important;
 	height: 150px !important;
 }
 #content.site-content{
@@ -19,6 +19,12 @@ body{
 }
 h3{
 	    font-size: 1rem;
+}
+.title-promo{
+	font-size: 4em !important;
+}
+.title-slide{
+	font-size: 2em !important;
 }
 
 
