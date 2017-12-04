@@ -2,8 +2,8 @@
 Contributors: algoritmika, anbinder
 Tags: woocommerce, booster for woocommerce, woocommerce jetpack
 Requires at least: 4.4
-Tested up to: 4.8
-Stable tag: 3.2.2
+Tested up to: 4.9
+Stable tag: 3.2.3
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -75,9 +75,11 @@ Booster for WooCommerce is a WordPress plugin that supercharges your site with a
 * *Checkout Custom Info* - Add custom info to WooCommerce checkout page.
 * *Checkout Customization* - Customize WooCommerce checkout - hide "Order Again" button; disable selected fields on checkout for logged users and more.
 * *Checkout Files Upload* - Let customers upload files on (or after) WooCommerce checkout.
+* *Coupon Code Generator* - WooCommerce coupon code generator.
 * *EU VAT Number* - Collect and validate EU VAT numbers on WooCommerce checkout. Automatically disable VAT for valid numbers. Add all EU countries VAT standard rates to WooCommerce.
 * *Empty Cart Button* - Add (and customize) "Empty Cart" button to WooCommerce cart and checkout pages.
 * *Mini Cart Custom Info* - Add custom info to WooCommerce mini cart widget.
+* *URL Coupons* - WooCommerce URL coupons.
 
 **Payment Gateways**
 
@@ -128,7 +130,6 @@ Booster for WooCommerce is a WordPress plugin that supercharges your site with a
 * *My Account* - WooCommerce "My Account" page customization.
 * *Old Slugs* - Remove old WooCommerce products slugs.
 * *Reports* - WooCommerce stock, sales, customers etc. reports.
-* *URL Coupons* - WooCommerce URL coupons.
 * *User Tracking* - Track your users in WooCommerce.
 
 = Feedback =
@@ -169,6 +170,28 @@ You can see the differences between versions in this [table](https://booster.io/
 8. Booster for WooCommerce - Emails & Misc.
 
 == Changelog ==
+
+= 3.2.3 - 03/12/2017 =
+* Fix - PRICES & CURRENCIES - Currency Exchange Rates - cURL option fixed for "Yahoo" and "Fixer.io" servers.
+* Dev - PRICES & CURRENCIES - Currency Exchange Rates - Server - Default value set to "European Central Bank (ECB)".
+* Dev - BUTTON & PRICE LABELS - Custom Price Labels - "Entrada" theme filter added.
+* Dev - PRODUCTS - Product Listings - "Product Shop Visibility by Price" section added.
+* Fix - PRODUCTS - SKU - Search by SKU on frontend - Bug fixed.
+* Dev - CART & CHECKOUT - Checkout Files Upload - "Advanced Options" section added.
+* Dev - CART & CHECKOUT - Coupon Code Generator - Initial module release (moved from "General" module).
+* Dev - CART & CHECKOUT - Coupon Code Generator - "Algorithm" and "Length" options added.
+* Dev - CART & CHECKOUT - URL Coupons - Module moved from "EMAILS & MISC." section.
+* Fix - PAYMENT GATEWAYS - Gateways Min/Max Amounts - Checking for `WC()` function to exist before accessing to `WC()->cart`. Checking for `is_checkout()`. Code refactoring.
+* Dev - SHIPPING & ORDERS - Order Min/Max Quantities - General Options - Variable Products - "Force on add to cart" option added.
+* Dev - SHIPPING & ORDERS - Order Min/Max Quantities - General Options - Variable Products - "Action on variation change" option added.
+* Fix - SHIPPING & ORDERS - Order Min/Max Quantities - `get_cart_url()` method replaced with `wc_get_cart_url()` function.
+* Fix - SHIPPING & ORDERS - Order Minimum Amount - `get_cart_url()` method replaced with `wc_get_cart_url()` function.
+* Dev - SHIPPING & ORDERS - Order Numbers - "WooCommerce Subscriptions" plugin compatibility added (sequential and random order numbers).
+* Dev - PDF INVOICING & PACKING SLIPS - "Replace Admin Order Search with Invoice Search" option added.
+* Dev - PDF INVOICING & PACKING SLIPS - "Default Images Directory" option moved from "Header" settings section to "General" section.
+* Dev - PDF INVOICING & PACKING SLIPS - Page Settings - "Background Image" option added.
+* Fix - Functions - General - `wcj_get_select_options()` - Prefix (`wcj-`) is added to the keys (to prevent issues with numeric keys).
+* Fix - Settings Manager - `manage_options()` fixed.
 
 = 3.2.2 - 12/11/2017 =
 * Dev - PRICES & CURRENCIES - Multicurrency (Currency Switcher) - "Advanced: Price Filters Priority" option added.

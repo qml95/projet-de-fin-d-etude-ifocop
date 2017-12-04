@@ -2,7 +2,7 @@
 /**
  * Booster for WooCommerce - Module - Order Min/Max Quantities
  *
- * @version 3.2.2
+ * @version 3.2.3
  * @since   2.9.0
  * @author  Algoritmika Ltd.
  */
@@ -60,13 +60,19 @@ class WCJ_Order_Quantities extends WCJ_Module {
 	/**
 	 * enqueue_script.
 	 *
-	 * @version 3.2.2
+	 * @version 3.2.3
 	 * @since   3.2.2
+	 * @todo    `force_on_add_to_cart` for simple products
 	 * @todo    make this optional?
 	 */
 	function enqueue_script() {
 		$_product = wc_get_product();
 		if ( $_product && $_product->is_type( 'variable' ) ) {
+			$quantities_options = array(
+				'reset_to_min'         => ( 'reset_to_min' === get_option( 'wcj_order_quantities_variable_variation_change', 'do_nothing' ) ),
+				'reset_to_max'         => ( 'reset_to_max' === get_option( 'wcj_order_quantities_variable_variation_change', 'do_nothing' ) ),
+				'force_on_add_to_cart' => ( 'yes' === get_option( 'wcj_order_quantities_variable_force_on_add_to_cart', 'no' ) ),
+			);
 			$product_quantities = array();
 			foreach ( $_product->get_available_variations() as $variation ) {
 				$product_quantities[ $variation['variation_id'] ] = array(
@@ -76,6 +82,7 @@ class WCJ_Order_Quantities extends WCJ_Module {
 			}
 			wp_enqueue_script(  'wcj-order-quantities',  trailingslashit( wcj_plugin_url() ) . 'includes/js/wcj-order-quantities.js', array( 'jquery' ), WCJ()->version, true );
 			wp_localize_script( 'wcj-order-quantities', 'product_quantities', $product_quantities );
+			wp_localize_script( 'wcj-order-quantities', 'quantities_options', $quantities_options );
 		}
 	}
 
@@ -158,7 +165,7 @@ class WCJ_Order_Quantities extends WCJ_Module {
 	/**
 	 * stop_from_seeing_checkout.
 	 *
-	 * @version 2.9.0
+	 * @version 3.2.3
 	 * @since   2.9.0
 	 */
 	function stop_from_seeing_checkout() {
@@ -175,13 +182,13 @@ class WCJ_Order_Quantities extends WCJ_Module {
 		$cart_total_quantity = array_sum( $cart_item_quantities );
 		if ( 'yes' === get_option( 'wcj_order_quantities_max_section_enabled', 'no' ) ) {
 			if ( ! $this->check_quantities( 'max', $cart_item_quantities, $cart_total_quantity, false, true ) ) {
-				wp_safe_redirect( WC()->cart->get_cart_url() );
+				wp_safe_redirect( wc_get_cart_url() );
 				exit;
 			}
 		}
 		if ( 'yes' === get_option( 'wcj_order_quantities_min_section_enabled', 'no' ) ) {
 			if ( ! $this->check_quantities( 'min', $cart_item_quantities, $cart_total_quantity, false, true ) ) {
-				wp_safe_redirect( WC()->cart->get_cart_url() );
+				wp_safe_redirect( wc_get_cart_url() );
 				exit;
 			}
 		}

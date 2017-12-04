@@ -2,7 +2,7 @@
 /**
  * Booster for WooCommerce - Settings - PDF Invoicing - General
  *
- * @version 3.2.2
+ * @version 3.2.3
  * @since   2.8.0
  * @author  Algoritmika Ltd.
  */
@@ -75,6 +75,27 @@ $settings = array_merge( $settings, array(
 		'id'       => 'wcj_invoicing_hide_disabled_docs_settings',
 		'default'  => 'no',
 		'type'     => 'checkbox',
+	),
+	array(
+		'title'    => __( 'Replace Admin Order Search with Invoice Search', 'woocommerce-jetpack' ),
+		'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+		'id'       => 'wcj_invoicing_admin_search_by_invoice',
+		'default'  => 'no',
+		'type'     => 'checkbox',
+	),
+	array(
+		'title'    => __( 'Advanced', 'woocommerce-jetpack' ) . ': ' . __( 'Default Images Directory', 'woocommerce-jetpack' ),
+		'desc'     => __( 'Default images directory in TCPDF library (K_PATH_IMAGES).', 'woocommerce-jetpack' ),
+		'desc_tip' => __( 'Try changing this if you have issues displaying images in page background or header.', 'woocommerce-jetpack' ),
+		'id'       => 'wcj_invoicing_general_header_images_path', // mislabelled, should be `wcj_invoicing_general_images_path`
+		'default'  => 'empty',
+		'type'     => 'select',
+		'options'  => array(
+			'empty'         => __( 'Empty', 'woocommerce-jetpack' ),
+			'tcpdf_default' => __( 'TCPDF Default', 'woocommerce-jetpack' ),
+			'abspath'       => __( 'ABSPATH', 'woocommerce-jetpack' ),       // . ': ' . ABSPATH,
+			'document_root' => __( 'DOCUMENT_ROOT', 'woocommerce-jetpack' ), // . ': ' . $_SERVER['DOCUMENT_ROOT'],
+		),
 	),
 	array(
 		'type'     => 'sectionend',
