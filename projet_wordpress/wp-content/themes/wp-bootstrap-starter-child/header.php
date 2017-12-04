@@ -54,7 +54,7 @@
                 'walker'          => new wp_bootstrap_navwalker()
                 ));
                 ?>
-<?php dynamic_sidebar('region-haut-produit'); ?>
+<?php dynamic_sidebar('head-banner'); ?>
             </nav>
         </div>
 
