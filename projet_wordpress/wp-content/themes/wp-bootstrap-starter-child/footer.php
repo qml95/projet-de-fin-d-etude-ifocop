@@ -22,9 +22,9 @@
                 <span class="sep"> | </span>
                 <a class="credits" href="https://afterimagedesigns.com/wp-bootstrap-starter/" target="_blank" title="Wordpress Technical Support" alt="Bootstrap Wordpress Theme"><?php echo esc_html__('Bootstrap Wordpress Theme','wp-bootstrap-starter'); ?></a>
 								<span class="sep"> | </span>
-								<a href="#">Mentions Légales</a>
+								<a href="http://localhost:8888/projet-de-fin-d-etude-ifocop/projet_wordpress/mentions-legales/">Mentions Légales</a>
 								<span class="sep"> | </span>
-								<a href="#">Conditions Générale de Ventes</a>
+								<a href="http://localhost:8888/projet-de-fin-d-etude-ifocop/projet_wordpress/cgv/">Conditions Générale de Ventes</a>
 
             </div><!-- close .site-info -->
 		</div>
