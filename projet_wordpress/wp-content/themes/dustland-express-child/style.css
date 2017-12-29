@@ -13,7 +13,18 @@
 /*--------------------------------------------------------------------
 														partie NAV
 --------------------------------------------------------------------*/
-
+.main-navigation {
+  background-color: #233F63 !important;
+}
+.mega-menu-wrap {
+  background-color: #233F63 !important;
+}
+.mega-menu-link {
+  color : white !important;
+}
+.header-cart-amount {
+  font-size: 1.5em !important;
+}
 
 
 
@@ -36,7 +47,7 @@
   margin: 0 !important;
 }
 .home__liste--i {
-  color: darkblue !important;
+  color: #233F63 !important;
 }
 
 
@@ -71,3 +82,15 @@
 /*--------------------------------------------------------------------
 														partie mon compte
 --------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------------
+														partie Footer
+--------------------------------------------------------------------*/
+#maxmegamenu-2 {
+  width: 60% !important;
+}
+.site-footer {
+  background-color: #233F63 !important;
+}
