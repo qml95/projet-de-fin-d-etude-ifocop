@@ -2,7 +2,7 @@
 /**
  * Booster for WooCommerce - Settings - Checkout Custom Fields
  *
- * @version 3.2.2
+ * @version 3.2.4
  * @since   2.8.0
  * @author  Algoritmika Ltd.
  */
@@ -104,7 +104,7 @@ for ( $i = 1; $i <= apply_filters( 'booster_get_option', 1, get_option( 'wcj_che
 			),
 			array(
 				'title'    => __( 'Enable/Disable', 'woocommerce-jetpack' ),
-				'desc'     => __( 'Enable', 'woocommerce-jetpack' ),
+				'desc'     => '<strong>' . __( 'Enable', 'woocommerce-jetpack' ) . '</strong>',
 				'desc_tip' => __( 'Key', 'woocommerce-jetpack' ) . ': ' .
 					'<code>' . get_option( 'wcj_checkout_custom_field_section_' . $i, 'billing' ) . '_' . 'wcj_checkout_field_' . $i . '</code>',
 				'id'       => 'wcj_checkout_custom_field_enabled_' . $i,
@@ -186,6 +186,13 @@ for ( $i = 1; $i <= apply_filters( 'booster_get_option', 1, get_option( 'wcj_che
 			array(
 				'title'    => __( 'Clear', 'woocommerce-jetpack' ),
 				'id'       => 'wcj_checkout_custom_field_clear_' . $i,
+				'default'  => 'yes',
+				'type'     => 'checkbox',
+			),
+			array(
+				'title'    => __( 'Customer Meta Fields', 'woocommerce-jetpack' ),
+				'desc'     => __( 'Add', 'woocommerce-jetpack' ),
+				'id'       => 'wcj_checkout_custom_field_customer_meta_fields_' . $i,
 				'default'  => 'yes',
 				'type'     => 'checkbox',
 			),
@@ -325,6 +332,22 @@ for ( $i = 1; $i <= apply_filters( 'booster_get_option', 1, get_option( 'wcj_che
 				'type'     => 'multiselect',
 				'class'    => 'chosen_select',
 				'options'  => $products,
+			),
+			array(
+				'title'    => __( 'Min Cart Amount', 'woocommerce-jetpack' ),
+				'desc_tip' => __( 'Show this field only if cart total is at least this amount. Set zero to disable.', 'woocommerce-jetpack' ),
+				'id'       => 'wcj_checkout_custom_field_min_cart_amount_' . $i,
+				'default'  => 0,
+				'type'     => 'number',
+				'custom_attributes' => array( 'min' => 0, 'step' => wcj_get_wc_price_step() ),
+			),
+			array(
+				'title'    => __( 'Max Cart Amount', 'woocommerce-jetpack' ),
+				'desc_tip' => __( 'Show this field only if cart total is not more than this amount. Set zero to disable.', 'woocommerce-jetpack' ),
+				'id'       => 'wcj_checkout_custom_field_max_cart_amount_' . $i,
+				'default'  => 0,
+				'type'     => 'number',
+				'custom_attributes' => array( 'min' => 0, 'step' => wcj_get_wc_price_step() ),
 			),
 			array(
 				'type'     => 'sectionend',

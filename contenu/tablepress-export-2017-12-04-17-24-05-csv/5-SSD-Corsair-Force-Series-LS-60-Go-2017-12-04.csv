@@ -1,0 +1,14 @@
+Format,"2,5"""
+Capacité,60 Go
+Type de mémoire,MLC (Multi-Level Cell)
+Interface,SATA 3 (6Gb/s)
+"Protocole ",AHCI
+Taux de transfert maximal en lecture,540Mo/s
+taux de transfert maximal en écriture,440Mo/s
+IOPS en lecture,43 000
+IOPS en écriture,23 000
+PRÉSENTATION,
+Version boite,Oui
+Dimensions,100 x 70 x 7 mm
+Poids,50 g
+Référence constructeur,CSSD-F60GBLSB

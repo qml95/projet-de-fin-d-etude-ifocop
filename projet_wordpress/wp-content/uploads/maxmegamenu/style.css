@@ -1,4 +1,4 @@
-/** Monday 4th of December 2017 09:26:26 AM (core) **/
+/** Friday 22nd of December 2017 11:47:09 AM (core) **/
 
 #mega-menu-wrap-primary, #mega-menu-wrap-primary #mega-menu-primary, #mega-menu-wrap-primary #mega-menu-primary ul.mega-sub-menu, #mega-menu-wrap-primary #mega-menu-primary li.mega-menu-item, #mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link {
   -moz-transition: none;
@@ -49,7 +49,7 @@
   display: none;
 }
 #mega-menu-wrap-primary {
-  background: #222;
+  background: #fff;
   -webkit-border-radius: 0px 0px 0px 0px;
   -moz-border-radius: 0px 0px 0px 0px;
   -ms-border-radius: 0px 0px 0px 0px;
@@ -67,6 +67,11 @@
   visibility: visible;
   text-align: left;
   padding: 0px 0px 0px 0px;
+}
+@media only screen and (max-width: 600px) {
+  #mega-menu-wrap-primary #mega-menu-primary {
+    background: #222;
+  }
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-primary #mega-menu-primary {
@@ -252,10 +257,10 @@
   border-color: #fff;
 }
 #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
-  border-top: 0px solid #fff;
-  border-left: 0px solid #fff;
-  border-right: 0px solid #fff;
-  border-bottom: 0px solid #fff;
+  border-top: 0px solid #222;
+  border-left: 0px solid #222;
+  border-right: 0px solid #222;
+  border-bottom: 0px solid #222;
   outline: none;
   text-decoration: none;
   padding: 0px 10px 0px 10px;
@@ -266,7 +271,7 @@
   text-align: left;
   width: auto;
   display: block;
-  color: #fff;
+  color: #222;
   text-transform: none;
   text-decoration: none;
   background: rgba(0, 0, 0, 0);

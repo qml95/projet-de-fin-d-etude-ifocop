@@ -2,11 +2,33 @@
 /**
  * Booster for WooCommerce - Functions
  *
- * @version 3.2.3
+ * @version 3.2.4
  * @author  Algoritmika Ltd.
+ * @todo    add `wcj_add_actions()` and `wcj_add_filters()`
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
+
+if ( ! function_exists( 'wcj_get_woocommerce_package_rates_module_filter_priority' ) ) {
+	/**
+	 * wcj_get_woocommerce_package_rates_module_filter_priority.
+	 *
+	 * @version 3.2.4
+	 * @since   3.2.4
+	 * @todo    add `shipping_by_order_amount` module
+	 */
+	function wcj_get_woocommerce_package_rates_module_filter_priority( $module_id ) {
+		$modules_priorities = array(
+			'shipping_options_hide_free_shipping'  => PHP_INT_MAX,
+			'shipping_by_products'                 => PHP_INT_MAX - 100,
+			'shipping_by_user_role'                => PHP_INT_MAX - 100,
+		);
+		return ( 0 != ( $priority = get_option( 'wcj_' . $module_id . '_filter_priority', 0 ) ) ?
+			$priority :
+			( isset( $modules_priorities[ $module_id ] ) ? $modules_priorities[ $module_id ] : PHP_INT_MAX )
+		);
+	}
+}
 
 if ( ! function_exists( 'wcj_session_maybe_start' ) ) {
 	/**
@@ -463,16 +485,16 @@ if ( ! function_exists( 'wcj_get_select_options' ) ) {
 	/*
 	 * wcj_get_select_options()
 	 *
-	 * @version  3.2.3
+	 * @version  3.2.4
 	 * @since    2.3.0
 	 * @return   array
 	 */
 	function wcj_get_select_options( $select_options_raw, $do_sanitize = true ) {
-		$select_options_raw = explode( PHP_EOL, $select_options_raw );
+		$select_options_raw = array_map( 'trim', explode( PHP_EOL, $select_options_raw ) );
 		$select_options = array();
 		foreach ( $select_options_raw as $select_options_title ) {
 			$select_options_key = ( $do_sanitize ) ? sanitize_title( $select_options_title ) : $select_options_title;
-			$select_options[ 'wcj-' . $select_options_key ] = $select_options_title;
+			$select_options[ $select_options_key ] = $select_options_title;
 		}
 		return $select_options;
 	}
@@ -486,7 +508,7 @@ if ( ! function_exists( 'wcj_is_frontend' ) ) {
 	 * @return boolean
 	 */
 	function wcj_is_frontend() {
-		return ( ! is_admin() || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) ? true : false;
+		return ( ! is_admin() || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) );
 	}
 }
 

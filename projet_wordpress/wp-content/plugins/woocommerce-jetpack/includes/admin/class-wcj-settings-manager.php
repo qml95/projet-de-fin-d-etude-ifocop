@@ -2,7 +2,7 @@
 /**
  * Booster for WooCommerce - Settings Manager
  *
- * @version 3.2.3
+ * @version 3.2.4
  * @since   2.9.0
  * @author  Algoritmika Ltd.
  */
@@ -50,7 +50,7 @@ class WCJ_Settings_Manager {
 	/**
 	 * manage_options_import.
 	 *
-	 * @version 2.5.4
+	 * @version 3.2.4
 	 * @since   2.5.2
 	 */
 	function manage_options_import() {
@@ -73,8 +73,10 @@ class WCJ_Settings_Manager {
 				} else {
 					$import_settings = json_decode( $import_settings[1], true );
 					foreach ( $import_settings as $import_key => $import_setting ) {
-						update_option( $import_key, $import_setting );
-						$import_counter++;
+						if ( strlen( $import_key ) > 4 && 'wcj_' === substr( $import_key, 0, 4 ) ) {
+							update_option( $import_key, $import_setting );
+							$import_counter++;
+						}
 					}
 					$wcj_notice .= sprintf( __( '%d options successfully imported.', 'woocommerce-jetpack' ), $import_counter );
 				}
@@ -120,11 +122,13 @@ class WCJ_Settings_Manager {
 	/**
 	 * manage_options_reset.
 	 *
-	 * @version 2.9.0
+	 * @version 3.2.4
 	 * @since   2.5.2
+	 * @todo    clean up
 	 */
 	function manage_options_reset() {
 		global $wcj_notice;
+		/*
 		$delete_counter = 0;
 		foreach ( WCJ()->modules as $module ) {
 			$values = $module->get_settings();
@@ -142,6 +146,24 @@ class WCJ_Settings_Manager {
 		}
 		if ( $delete_counter > 0 ) {
 			$wcj_notice .= sprintf( __( '%d options successfully deleted.', 'woocommerce-jetpack' ), $delete_counter );
+		}
+		*/
+		global $wpdb;
+		$delete_counter_meta = 0;
+		$plugin_meta = $wpdb->get_results( "SELECT * FROM $wpdb->postmeta WHERE meta_key LIKE '_wcj_%'" );
+		foreach( $plugin_meta as $meta ) {
+			delete_post_meta( $meta->post_id, $meta->meta_key );
+			$delete_counter_meta++;
+		}
+		$delete_counter_options = 0;
+		$plugin_options = $wpdb->get_results( "SELECT option_name FROM $wpdb->options WHERE option_name LIKE 'wcj_%'" );
+		foreach( $plugin_options as $option ) {
+			delete_option( $option->option_name );
+			delete_site_option( $option->option_name );
+			$delete_counter_options++;
+		}
+		if ( $delete_counter_meta > 0 || $delete_counter_options > 0) {
+			$wcj_notice .= sprintf( __( '%d options and %d meta successfully deleted.', 'woocommerce-jetpack' ), $delete_counter_options, $delete_counter_meta );
 		}
 	}
 

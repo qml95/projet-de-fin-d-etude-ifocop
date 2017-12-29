@@ -1,0 +1,17 @@
+Format,Carte M.2
+Capacité,120 Go
+Type de mémoire,MLC (Multi-Level Cell)
+Interface,SATA 3 (6 Gb/s)
+M.2 câblé en PCI-Express,Non
+M.2 câblé en SATA	,Oui
+Taux de transfert maximal en lecture	,"550 Mo/sec (SATA III 6 Gb/s)
+"
+Taux de transfert maximal en écriture	,"200 Mo/sec (SATA lll 6 Gb/s)
+"
+IOPS en lecture,80 000
+IOPS en écriture,48 000
+Version boîte	,Non
+Dimensions,"80 x 22 x 3,5 mm"
+Poids,"5,99 g
+"
+Référence constructeur	,SM2280S3G2/120G

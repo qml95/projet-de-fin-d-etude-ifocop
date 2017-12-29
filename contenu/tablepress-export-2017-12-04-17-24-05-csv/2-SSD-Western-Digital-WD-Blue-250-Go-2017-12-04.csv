@@ -1,0 +1,14 @@
+Format,250 GO
+Type de mémoire,TLC (Triple-Level-Cell)
+Interface,SATA 3 (6Gb/s)
+Taux de transfert maximal en lecture,540 Mo/s
+Taux de transfert maximal en écriture,500Mo/s
+IOPS en lecture,97 000
+IOPS en écriture,79 000
+MBTF,"1,75 million d'heures"
+PRESENTATION,
+Version boite,boite
+Dimensions,"100,20 x 69,85 x 7 mm"
+Poids,"37,4g"
+Référence constructeur,WDS250G1B0A
+,

@@ -1,0 +1,73 @@
+/*
+	Theme Name: dustland-express-child
+	Template: dustland-express
+*/
+@import url("../dustland-express/style.css");
+
+/*--------------------------------------------------------------------
+                              partie general
+--------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------------
+														partie NAV
+--------------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------------
+														partie Home
+--------------------------------------------------------------------*/
+.home__liste {
+  display: flex !important;
+  list-style: none !important;
+}
+.home__liste--li {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.home__liste--div {
+  text-align: center !important;
+}
+.home__liste--p {
+  margin: 0 !important;
+}
+.home__liste--i {
+  color: darkblue !important;
+}
+
+
+
+/*--------------------------------------------------------------------
+														partie Boutique
+--------------------------------------------------------------------*/
+.onsale {
+  background-color: red !important;
+}
+
+.product_type_simple {
+  background-color: #81d742 !important;
+}
+
+
+
+/*--------------------------------------------------------------------
+														partie single product
+--------------------------------------------------------------------*/
+.tagged_as {
+  display: none !important;
+}
+.posted_in {
+  display: none !important;
+}
+
+.sku_wrapper {
+  display: none !important;
+}
+
+/*--------------------------------------------------------------------
+														partie mon compte
+--------------------------------------------------------------------*/

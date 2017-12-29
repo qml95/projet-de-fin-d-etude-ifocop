@@ -1,0 +1,52 @@
+PROCESSEUR,
+Modèle,Processeur Intel Core i7 7700
+Nombre de cœur(s),4
+Fréquence,"3,60 GHz"
+,
+CARTE GRAPHIQUE,
+Nombre de carte installées,1
+Puce graphique,NVIDIA GeForce GTX 1070
+Mémoire,8192 Mo
+,
+MÉMOIRE,
+Type de mémoire,SO-DIMM DDR4
+Quantité de mémoire intégrée,16 Go
+Nombre de barettes,2
+Fréquence,2400 MHz
+,
+"CARTE MÈRE
+",
+Chipset,Intel B250
+connexion WIFI,"oui - intégré (norme 802.11/ac)
+"
+Puce bluetooth,Oui 4.2
+CONNECTIQUE,
+Carte graphique	,"1 x HDMI 2.0
+3 x DisplayPort 1.4
+1 x DVI-D"
+Façade,"Entrée casque
+Entrée micro
+1 x USB type C 3.1
+2 x USB type A 2.0"
+Arrière,"	1 x RJ45 (Killer E2500 Gigabit Ethernet et Killer Shield)
+2 x USB type A 2.0
+4 x USB type A 3.0
+1 x Sortie SPDIF
+1 x Entrée micro
+1 x Sortie casque"
+STOCKAGE,
+Capacité totale,2000 Go pour le données et 256 Go pour le système
+Disque dur n°1,2000 Go
+Disque dur n°2,256 Go
+Graveur / lecteur,"DVD+/-RW Super Multi
+"
+BOÎTIER,
+Dimensions,"170 x 376 x 433 mm
+"
+ALIMENTATION,
+Puissance,450 Watts
+Certification 80+,80+ Bronze
+"LOGICIEL(S) FOURNIS
+",
+Système d'exploitation	,"Microsoft Windows 10 Home 64 bits
+"

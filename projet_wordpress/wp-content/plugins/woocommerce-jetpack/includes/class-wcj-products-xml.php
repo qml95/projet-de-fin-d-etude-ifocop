@@ -2,7 +2,7 @@
 /**
  * Booster for WooCommerce - Module - Products XML
  *
- * @version 2.8.0
+ * @version 3.2.4
  * @since   2.5.7
  * @author  Algoritmika Ltd.
  * @todo    create all files at once (manually and synchronize update)
@@ -17,15 +17,15 @@ class WCJ_Products_XML extends WCJ_Module {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.8.0
+	 * @version 3.2.4
 	 * @since   2.5.7
 	 */
 	function __construct() {
 
 		$this->id         = 'products_xml';
-		$this->short_desc = __( 'Products XML', 'woocommerce-jetpack' );
-		$this->desc       = __( 'WooCommerce products XML feed.', 'woocommerce-jetpack' );
-		$this->link_slug  = 'woocommerce-products-xml-feed';
+		$this->short_desc = __( 'Products XML Feeds', 'woocommerce-jetpack' );
+		$this->desc       = __( 'WooCommerce products XML feeds.', 'woocommerce-jetpack' );
+		$this->link_slug  = 'woocommerce-products-xml-feeds';
 		parent::__construct();
 
 		if ( $this->is_enabled() ) {
@@ -154,7 +154,7 @@ class WCJ_Products_XML extends WCJ_Module {
 	/**
 	 * create_products_xml.
 	 *
-	 * @version 2.6.0
+	 * @version 3.2.4
 	 * @since   2.5.7
 	 */
 	function create_products_xml( $file_num ) {
@@ -162,8 +162,8 @@ class WCJ_Products_XML extends WCJ_Module {
 		$xml_header_template  = get_option( 'wcj_products_xml_header_'        . $file_num, '' );
 		$xml_footer_template  = get_option( 'wcj_products_xml_footer_'        . $file_num, '' );
 		$xml_item_template    = get_option( 'wcj_products_xml_item_'          . $file_num, '' );
-		$products_in_ids      = get_option( 'wcj_products_xml_products_incl_' . $file_num, '' );
-		$products_ex_ids      = get_option( 'wcj_products_xml_products_excl_' . $file_num, '' );
+		$products_in_ids      = wcj_maybe_convert_string_to_array( get_option( 'wcj_products_xml_products_incl_' . $file_num, '' ) );
+		$products_ex_ids      = wcj_maybe_convert_string_to_array( get_option( 'wcj_products_xml_products_excl_' . $file_num, '' ) );
 		$products_cats_in_ids = get_option( 'wcj_products_xml_cats_incl_'     . $file_num, '' );
 		$products_cats_ex_ids = get_option( 'wcj_products_xml_cats_excl_'     . $file_num, '' );
 		$products_tags_in_ids = get_option( 'wcj_products_xml_tags_incl_'     . $file_num, '' );

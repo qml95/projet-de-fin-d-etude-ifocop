@@ -3,7 +3,7 @@ Contributors: algoritmika, anbinder
 Tags: woocommerce, booster for woocommerce, woocommerce jetpack
 Requires at least: 4.4
 Tested up to: 4.9
-Stable tag: 3.2.3
+Stable tag: 3.2.4
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -18,7 +18,7 @@ Booster for WooCommerce is a WordPress plugin that supercharges your site with a
 **Prices & Currencies**
 
 * *Bulk Price Converter* - Multiply all WooCommerce products prices by set value.
-* *Currencies* - Add all world currencies to your WooCommerce store; change currency symbol.
+* *Currencies* - Add all world currencies and cryptocurrencies to your WooCommerce store; change currency symbol.
 * *Currency Exchange Rates* - Automatic currency exchange rates for WooCommerce.
 * *Currency for External Products* - Set different currency for external WooCommerce products.
 * *Currency per Product* - Display prices for WooCommerce products in different currencies.
@@ -43,6 +43,7 @@ Booster for WooCommerce is a WordPress plugin that supercharges your site with a
 
 **Products**
 
+* *Admin Products List* - Customize WooCommerce admin products list.
 * *Bookings* - Add bookings products to WooCommerce.
 * *Cost of Goods* - Save WooCommerce product purchase costs data for admin reports.
 * *Crowdfunding* - Add crowdfunding products to WooCommerce.
@@ -51,19 +52,22 @@ Booster for WooCommerce is a WordPress plugin that supercharges your site with a
 * *Product Availability by Date* - WooCommerce product availability by date.
 * *Product Availability by Time* - WooCommerce product availability by time.
 * *Product Bulk Meta Editor* - Set WooCommerce products meta with bulk editor.
-* *Product Images* - Customize WooCommerce products images, thumbnails and sale flashes.
+* *Product Custom Visibility* - Display WooCommerce products by custom param.
+* *Product Images* - Customize WooCommerce products images and thumbnails.
 * *Product Info* - Add additional info to WooCommerce category and single product pages.
 * *Product Input Fields* - WooCommerce product input fields.
 * *Product Listings* - Change WooCommerce display options for shop and category pages: show/hide categories count, exclude categories, show/hide empty categories.
 * *Product Tabs* - Add custom product tabs - globally or per product. Customize or completely remove WooCommerce default product tabs.
 * *Product Visibility by Country* - Display WooCommerce products by customer's country.
 * *Product Visibility by User Role* - Display WooCommerce products by customer's user role.
-* *Products XML* - WooCommerce products XML feed.
+* *Products XML Feeds* - WooCommerce products XML feeds.
 * *Products per Page* - Add "products per page" selector to WooCommerce.
 * *Related Products* - Change displayed WooCommerce related products number, columns, order; relate by tag, category, product attribute or manually on per product basis. Hide related products completely.
 * *SKU* - Generate WooCommerce SKUs automatically. Search by SKU on frontend.
+* *Sale Flash* - Customize WooCommerce products sale flash.
 * *Sorting* - Add more WooCommerce sorting options; rename or remove default sorting options; rearrange sorting options on frontend.
 * *Stock* - WooCommerce products stock management.
+* *Tax Display* - Customize WooCommerce tax display.
 * *User Products* - Let users add new WooCommerce products from frontend.
 
 **Cart & Checkout**
@@ -97,13 +101,14 @@ Booster for WooCommerce is a WordPress plugin that supercharges your site with a
 **Shipping & Orders**
 
 * *Address Formats* - Set address format in WooCommerce orders on per country basis. Force base country display.
+* *Admin Orders List* - Customize WooCommerce admin orders list: add custom columns; add multiple status filtering.
 * *Custom Shipping* - Add multiple custom shipping methods to WooCommerce.
 * *Left to Free Shipping* - Display "left to free shipping" info in WooCommerce.
 * *Order Custom Statuses* - Custom statuses for WooCommerce orders.
 * *Order Min/Max Quantities* - Set min/max product quantities in WooCommerce order.
 * *Order Minimum Amount* - Minimum WooCommerce order amount (optionally by user role).
 * *Order Numbers* - WooCommerce sequential order numbering, custom order number prefix, suffix and number width.
-* *Orders* - Orders auto-complete. Custom admin order list columns. Admin order currency. Admin order list multiple status filtering.
+* *Orders* - WooCommerce orders auto-complete; admin order currency; bulk regenerate download permissions for orders.
 * *Shipping Calculator* - Customize WooCommerce shipping calculator on cart page.
 * *Shipping Methods by Min/Max Order Amount* - Set minimum and/or maximum order amount for WooCommerce shipping methods to show up.
 * *Shipping Methods by Products* - Set products, product categories or tags to include/exclude for WooCommerce shipping methods to show up.
@@ -171,6 +176,68 @@ You can see the differences between versions in this [table](https://booster.io/
 
 == Changelog ==
 
+= 3.2.4 - 27/12/2017 =
+* Dev - PRICES & CURRENCIES - Currencies - More cryptocurrencies added.
+* Dev - PRICES & CURRENCIES - Currency Exchange Rates - Secondary "Exchange Rates Server" option added to each currency pair.
+* Fix - PRICES & CURRENCIES - Currency per Product - `change_currency_symbol()` - Changing symbol for appropriate currency code only.
+* Dev - PRICES & CURRENCIES - Price Formats - "Additional Currency Code Position" option added.
+* Dev - BUTTON & PRICE LABELS - Call for Price - Variable and grouped products support added.
+* Dev - PRODUCTS - Admin Products List - Initial module release (moved from "Product Listings" module).
+* Fix - PRODUCTS - Bookings - `wp_die()` replaced with `die()` in `price_change_ajax()`.
+* Dev - PRODUCTS - Product Add to Cart - "Set All Products to Sold individually" option added.
+* Dev - PRODUCTS - Product Add to Cart - External Products - Open External Products on Add to Cart in New Window - on Category/Archive Pages - Additional themes compatibility added.
+* Fix - PRODUCTS - Product Addons - `wp_die()` replaced with `die()` in `price_change_ajax()`.
+* Dev - PRODUCTS - Product Addons - "Position Priority on Frontend" option added.
+* Dev - PRODUCTS - Product Custom Visibility - Initial module release.
+* Dev - PRODUCTS - Product Images - "Enable Section" option removed. Minor setting restyling.
+* Dev - PRODUCTS - Product Input Fields - `array_merge()` replaced with `array_replace()` for `wcj_get_select_options()` results (with placeholder).
+* Dev - PRODUCTS - Product Input Fields - Frontend View Options - "HTML Template - Radio Field" option added.
+* Dev - PRODUCTS - Product Tabs - "Add Per Product Tabs Content to Yoast SEO plugin analysis" option added.
+* Fix - PRODUCTS - Product Visibility by Country - Session bug fixed.
+* Dev - PRODUCTS - Products XML - "Products to Include/Exclude" options can now be set as comma separated text (optionally) (instead of list).
+* Dev - PRODUCTS - Products XML - Renamed to "Products XML Feeds". Description and documentation URL updated.
+* Dev - PRODUCTS - Sale Flash - "Per Product", "Per Category", "Per Tag" options added.
+* Dev - PRODUCTS - Sale Flash - Initial module release (copied from "Product Images" module).
+* Fix - PRODUCTS - Tax Display - by Product & by User Role - `wcj_is_frontend()` check added.
+* Dev - PRODUCTS - Tax Display - "TAX Display - Toggle Button" section added.
+* Dev - PRODUCTS - Tax Display - Initial module release (moved from "Product Listings" module).
+* Dev - CART & CHECKOUT - Checkout Custom Fields - "Customer Meta Fields" options added.
+* Dev - CART & CHECKOUT - Checkout Custom Fields - "Min Cart Amount" and "Max Cart Amount" options added.
+* Dev - CART & CHECKOUT - Checkout Custom Fields - `array_merge()` replaced with `array_replace()` for `wcj_get_select_options()` results (with placeholder).
+* Fix - CART & CHECKOUT - EU VAT Number - Preserve VAT in Base Country - Issue with lowercase country code n VAT ID fixed.
+* Dev - SHIPPING & ORDERS - Admin Orders List - Initial module release (moved from "Orders" module).
+* Dev - SHIPPING & ORDERS - Order Minimum Amount - "Exclude Discounts from Cart Total" option added.
+* Dev - SHIPPING & ORDERS - Orders - Bulk Regenerate Download Permissions for Orders - All Orders - "Periodically" option added.
+* Dev - SHIPPING & ORDERS - Shipping Methods by Users / Shipping Methods by Products / Shipping Options (Hide if Free Shipping is Available) - "Filter Priority" options added.
+* Dev - PDF INVOICING & PACKING SLIPS - General - "Advanced: Temp Directory" option added.
+* Dev - PDF INVOICING & PACKING SLIPS - Page Settings - Page Format - "Custom" options added.
+* Dev - EMAILS & MISC. - Custom Emails - `%customer%` can now be used in comma separated list for multiple recipients.
+* Dev - EMAILS & MISC. - Reports - Custom Ranges / Product Sales (Daily) / Reports functions (also affects Export module) - `time()` replaced with `current_time()`.
+* Dev - EMAILS & MISC. - Reports - Orders - Product Sales (Monthly) - `wcj_reports_products_sales_check_product` filter added.
+* Fix - EMAILS & MISC. - Reports - Orders - Product Sales (Monthly) - WooCommerce v3.0.0 compatibility - "Product `parent` property accessed directly" issue fixed.
+* Dev - Shortcodes - General - `[wcj_barcode]` shortcode added.
+* Dev - Shortcodes - General - `[wcj_tcpdf_barcode]` shortcode added.
+* Dev - Shortcodes - Orders - `[wcj_order_date]` - `days` attribute added.
+* Fix - Shortcodes - Orders - `[wcj_order_items_table]` - `item_meta` column - `is_custom` meta excluded.
+* Dev - Shortcodes - Products - `[wcj_product_category_count]` shortcode added.
+* Dev - Shortcodes - Products - `[wcj_product_price]` - `currency` attribute added.
+* Fix - Shortcodes - Products - `[wcj_product_purchase_price]` - Using `wcj_get_product_id()` instead of `wcj_get_product_id_or_variation_parent_id()`.
+* Dev - Shortcodes - Products - `[wcj_product_purchase_price]` - `hide_currency` attribute added.
+* Dev - Shortcodes files renamed.
+* Dev - Functions - "Crons" added.
+* Dev - Functions - Debug - `wcj_log()` - `esc_url()` added.
+* Dev - Functions - Exchange Rates - `wcj_get_saved_exchange_rate()` function added.
+* Dev - Functions - Exchange Rates - Code refactoring (`wcj_get_currency_exchange_rates_url_response()` function added).
+* Dev - Functions - Exchange Rates - Exchange Rates Server - "CoinMarketCap" server added.
+* Dev - Functions - Exchange Rates - Exchange Rates Server - "Coinbase" server added.
+* Dev - Functions - General - `wcj_get_select_options()` - Prefix (`wcj-`) removed (was added in v3.2.3).
+* Dev - Functions - General - `wcj_get_select_options()` - `trim()` added.
+* Fix - Functions - Price and Currency - `wc_get_product_purchase_price()` - `int` replaced with `float` - this fixes the issue with purchase price calculating incorrectly (cutting decimal part).
+* Dev - Settings Manager - Import - Checking for `wcj_` prefix, when importing plugin settings.
+* Dev - Settings Manager - Reset - Now deletes all options (also includes meta).
+* Dev - Admin Settings - Custom Fields - `exchange_rate` field updated (12 decimals in `step` and code refactoring).
+* Dev - Code refactoring. `core` directory added.
+
 = 3.2.3 - 03/12/2017 =
 * Fix - PRICES & CURRENCIES - Currency Exchange Rates - cURL option fixed for "Yahoo" and "Fixer.io" servers.
 * Dev - PRICES & CURRENCIES - Currency Exchange Rates - Server - Default value set to "European Central Bank (ECB)".
@@ -191,7 +258,7 @@ You can see the differences between versions in this [table](https://booster.io/
 * Dev - PDF INVOICING & PACKING SLIPS - "Default Images Directory" option moved from "Header" settings section to "General" section.
 * Dev - PDF INVOICING & PACKING SLIPS - Page Settings - "Background Image" option added.
 * Fix - Functions - General - `wcj_get_select_options()` - Prefix (`wcj-`) is added to the keys (to prevent issues with numeric keys).
-* Fix - Settings Manager - `manage_options()` fixed.
+* Fix - Settings Manager - `manage_options()` - Security issue fixed.
 
 = 3.2.2 - 12/11/2017 =
 * Dev - PRICES & CURRENCIES - Multicurrency (Currency Switcher) - "Advanced: Price Filters Priority" option added.

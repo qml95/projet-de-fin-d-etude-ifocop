@@ -2,7 +2,7 @@
 /**
  * Booster for WooCommerce PDF Invoice
  *
- * @version 3.2.3
+ * @version 3.2.4
  * @author  Algoritmika Ltd.
  */
 
@@ -22,7 +22,7 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 	/**
 	 * prepare_pdf.
 	 *
-	 * @version 3.2.3
+	 * @version 3.2.4
 	 */
 	function prepare_pdf() {
 
@@ -30,13 +30,20 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 
 		$invoice_type = $this->invoice_type;
 
+		$page_format = get_option( 'wcj_invoicing_' . $invoice_type . '_page_format', 'A4' );
+		if ( 'custom' === $page_format ) {
+			$page_format = array(
+				get_option( 'wcj_invoicing_' . $invoice_type . '_page_format_custom_width',  0 ),
+				get_option( 'wcj_invoicing_' . $invoice_type . '_page_format_custom_height', 0 )
+			);
+		}
+
 		// Create new PDF document
 		require_once( wcj_plugin_path() . '/includes/classes/class-wcj-tcpdf.php' );
 		$pdf = new WCJ_TCPDF(
 			get_option( 'wcj_invoicing_' . $invoice_type . '_page_orientation', 'P' ),
 			PDF_UNIT,
-			//PDF_PAGE_FORMAT,
-			get_option( 'wcj_invoicing_' . $invoice_type . '_page_format', 'A4' ),
+			$page_format,
 			true,
 			'UTF-8',
 			false
@@ -147,7 +154,7 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 	/**
 	 * get_pdf.
 	 *
-	 * @version 3.1.0
+	 * @version 3.2.4
 	 * @todo    pass other params (billing_country, payment_method) as global (same as user_id) instead of $_GET
 	 */
 	function get_pdf( $dest ) {
@@ -175,70 +182,17 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 		// Print text using writeHTMLCell()
 		$pdf->writeHTMLCell( 0, 0, '', '', $styling . $html, 0, 1, 0, true, '', true );
 
-		/*
-		// set style for barcode
-		$style = array(
-			'border' => true,
-			'vpadding' => 'auto',
-			'hpadding' => 'auto',
-			'fgcolor' => array(0,0,0),
-			'bgcolor' => false, //array(255,255,255)
-			'module_width' => 1, // width of a single module in points
-			'module_height' => 1 // height of a single module in points
-		);
-
-		// -------------------------------------------------------------------
-		// PDF417 (ISO/IEC 15438:2006)
-
-		/*
-
-		 The $type parameter can be simple 'PDF417' or 'PDF417' followed by a
-		 number of comma-separated options:
-
-		 'PDF417,a,e,t,s,f,o0,o1,o2,o3,o4,o5,o6'
-
-		 Possible options are:
-
-			 a  = aspect ratio (width/height);
-			 e  = error correction level (0-8);
-
-			 Macro Control Block options:
-
-			 t  = total number of macro segments;
-			 s  = macro segment index (0-99998);
-			 f  = file ID;
-			 o0 = File Name (text);
-			 o1 = Segment Count (numeric);
-			 o2 = Time Stamp (numeric);
-			 o3 = Sender (text);
-			 o4 = Addressee (text);
-			 o5 = File Size (numeric);
-			 o6 = Checksum (numeric).
-
-		 Parameters t, s and f are required for a Macro Control Block, all other parametrs are optional.
-		 To use a comma character ',' on text options, replace it with the character 255: "\xff".
-
-		*//*
-
-		$pdf->write2DBarcode( 'www.woojetpack.com', 'PDF417', 0, 200, 0, 30, $style, 'T');
-		//$pdf->Text(80, 85, 'PDF417 (ISO/IEC 15438:2006)');
-
-		// -------------------------------------------------------------------
-		/**
-		require_once( wcj_plugin_path() .'/includes/lib/tcpdf_min/tcpdf_barcodes_2d.php');
-		$barcodeobj = new TCPDF2DBarcode('http://www.tcpdf.org', 'PDF417');
-		// output the barcode as PNG image
-		//$barcodeobj->getBarcodePNG(4, 4, array(0,0,0));
-		$html = $barcodeobj->getBarcodeHTML(4, 4, 'black');
-		//$pdf->writeHTMLCell( 0, 0, '', '', $html, 0, 1, 0, true, '', true );
-		/**/
-
 		// Close and output PDF document
 		$result_pdf = $pdf->Output( '', 'S' );
 		$file_name = $this->get_file_name();
 
+		$tmp_dir = get_option( 'wcj_invoicing_general_tmp_dir', '' );
+		if ( '' === $tmp_dir ) {
+			$tmp_dir = sys_get_temp_dir();
+		}
+
 		if ( 'F' === $dest ) {
-			$file_path = sys_get_temp_dir() . '/' . $file_name;
+			$file_path = $tmp_dir . '/' . $file_name;
 			if ( ! file_put_contents( $file_path, $result_pdf ) ) {
 				return null;
 			}
@@ -261,7 +215,7 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 				echo $result_pdf;
 			} else {
 
-				$file_path = sys_get_temp_dir() . '/' . $file_name;
+				$file_path = $tmp_dir . '/' . $file_name;
 				if ( ! file_put_contents( $file_path, $result_pdf ) ) {
 					return null;
 				}

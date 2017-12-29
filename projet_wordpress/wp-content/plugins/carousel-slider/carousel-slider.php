@@ -3,11 +3,14 @@
  * Plugin Name: Carousel Slider
  * Plugin URI: http://wordpress.org/plugins/carousel-slider
  * Description: The Easiest Way to Create SEO friendly Image, Logo, Video, Post and WooCommerce Product Carousel.
- * Version: 1.8.2
+ * Version: 1.8.3
  * Author: Sayful Islam
  * Author URI: https://sayfulislam.com
  * Requires at least: 4.4
  * Tested up to: 4.9
+ *
+ * WC requires at least: 2.5
+ * WC tested up to: 3.2
  *
  * Text Domain: carousel-slider
  *
@@ -26,10 +29,32 @@ if ( ! defined( 'WPINC' ) ) {
 if ( ! class_exists( 'Carousel_Slider' ) ) {
 
 	final class Carousel_Slider {
-		private $plugin_name = 'carousel-slider';
-		private $version = '1.8.2';
 
-		protected static $instance = null;
+		/**
+		 * Plugin name slug
+		 *
+		 * @var string
+		 */
+		private $plugin_name = 'carousel-slider';
+
+		/**
+		 * Plugin version
+		 *
+		 * @var string
+		 */
+		private $version = '1.8.3';
+
+		/**
+		 * Minimum PHP version required
+		 *
+		 * @var string
+		 */
+		private $min_php = '5.3.0';
+
+		/**
+		 * @var object
+		 */
+		protected static $instance;
 
 		/**
 		 * Main Carousel_Slider Instance
@@ -85,9 +110,8 @@ if ( ! class_exists( 'Carousel_Slider' ) ) {
 		/**
 		 * Include admin and front facing files
 		 */
-		public function includes() {
+		private function includes() {
 			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-i18n.php';
-			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-number-to-word.php';
 			require_once CAROUSEL_SLIDER_INCLUDES . '/functions-carousel-slider.php';
 			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-activator.php';
 			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-product.php';
@@ -95,30 +119,15 @@ if ( ! class_exists( 'Carousel_Slider' ) ) {
 			require_once CAROUSEL_SLIDER_WIDGETS . '/widget-carousel_slider.php';
 
 			if ( is_admin() ) {
-				$this->admin_includes();
+				require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-credit.php';
+				require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-documentation.php';
+				require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-vc-element.php';
+				require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-form.php';
+				require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-admin.php';
+				require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-meta-box.php';
+				require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-hero-carousel.php';
 			}
-			if ( ! is_admin() ) {
-				$this->frontend_includes();
-			}
-		}
 
-		/**
-		 * Include admin files
-		 */
-		public function admin_includes() {
-			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-credit.php';
-			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-vc-element.php';
-			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-documentation.php';
-			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-form.php';
-			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-admin.php';
-			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-content-carousel.php';
-			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-meta-box.php';
-		}
-
-		/**
-		 * Load front facing files
-		 */
-		public function frontend_includes() {
 			require_once CAROUSEL_SLIDER_PATH . '/shortcodes/class-carousel-slider-shortcode.php';
 			require_once CAROUSEL_SLIDER_PATH . '/shortcodes/class-carousel-slider-deprecated-shortcode.php';
 			require_once CAROUSEL_SLIDER_INCLUDES . '/class-carousel-slider-structured-data.php';

@@ -2,9 +2,10 @@
 /**
  * Booster for WooCommerce - Modules Array
  *
- * @version 3.2.3
+ * @version 3.2.4
  * @since   2.2.0
  * @author  Algoritmika Ltd.
+ * @todo    (maybe) split "Shipping & Orders", "Cart & Checkout", "Products", "Prices & Currencies" etc.
  */
 
 return apply_filters( 'wcj_modules', array(
@@ -59,6 +60,8 @@ return apply_filters( 'wcj_modules', array(
 		'desc'           => __( 'Bookings, Crowdfunding Products, Product Addons and Input Fields, Product Listings, Product Tabs and more.', 'woocommerce-jetpack' ),
 		'all_cat_ids'    => array(
 			'product_listings',
+			'tax_display',
+			'admin_products_list',
 			'products_per_page',
 			'product_tabs',
 			'product_custom_info',
@@ -73,8 +76,10 @@ return apply_filters( 'wcj_modules', array(
 			'crowdfunding',
 			'product_addons',
 			'product_images',
+			'sale_flash',
 			'product_by_country',
 			'product_by_user_role',
+			'product_custom_visibility',
 			'product_by_time',
 			'product_by_date',
 			'product_by_user',
@@ -132,6 +137,7 @@ return apply_filters( 'wcj_modules', array(
 			'shipping_by_order_amount',
 			'address_formats',
 			'orders',
+			'admin_orders_list',
 			'order_min_amount',
 			'order_numbers',
 			'order_custom_statuses',

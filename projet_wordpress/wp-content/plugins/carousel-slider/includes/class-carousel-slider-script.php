@@ -1,4 +1,9 @@
 <?php
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
 if ( ! class_exists( 'Carousel_Slider_Script' ) ):
 
 	class Carousel_Slider_Script {
@@ -19,6 +24,9 @@ if ( ! class_exists( 'Carousel_Slider_Script' ) ):
 		}
 
 		public function __construct() {
+			add_action( 'wp_loaded', array( $this, 'register_styles' ) );
+			add_action( 'wp_loaded', array( $this, 'register_scripts' ) );
+
 			add_action( 'wp_enqueue_scripts', array( $this, 'frontend_scripts' ), 15 );
 			add_action( 'wp_footer', array( $this, 'inline_script' ), 30 );
 
@@ -26,43 +34,95 @@ if ( ! class_exists( 'Carousel_Slider_Script' ) ):
 			add_action( 'admin_footer', array( $this, 'gallery_url_template' ), 5 );
 		}
 
+		public function register_styles() {
+			$suffix = ( defined( "SCRIPT_DEBUG" ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+			$styles = array(
+				'carousel-slider'       => array(
+					'src'        => CAROUSEL_SLIDER_ASSETS . '/css/style.css',
+					'dependency' => array(),
+					'version'    => CAROUSEL_SLIDER_VERSION,
+					'media'      => 'all',
+				),
+				'carousel-slider-admin' => array(
+					'src'        => CAROUSEL_SLIDER_ASSETS . '/css/admin.css',
+					'dependency' => array( 'wp-color-picker' ),
+					'version'    => CAROUSEL_SLIDER_VERSION,
+					'media'      => 'all',
+				),
+			);
+
+			foreach ( $styles as $handle => $style ) {
+				wp_register_style( $handle, $style['src'], $style['dependency'], $style['version'], $style['media'] );
+			}
+		}
+
+		public function register_scripts() {
+			$suffix = ( defined( "SCRIPT_DEBUG" ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+			$scripts = array(
+				'select2'               => array(
+					'src'        => CAROUSEL_SLIDER_ASSETS . '/lib/select2/select2' . $suffix . '.js',
+					'dependency' => array( 'jquery' ),
+					'version'    => '4.0.5',
+					'in_footer'  => true,
+				),
+				'jquery-tiptip'         => array(
+					'src'        => CAROUSEL_SLIDER_ASSETS . '/lib/jquery-tiptip/jquery.tipTip' . $suffix . '.js',
+					'dependency' => array( 'jquery' ),
+					'version'    => '1.3',
+					'in_footer'  => true,
+				),
+				'wp-color-picker-alpha' => array(
+					'src'        => CAROUSEL_SLIDER_ASSETS . '/lib/wp-color-picker-alpha/wp-color-picker-alpha' . $suffix . '.js',
+					'dependency' => array( 'jquery', 'wp-color-picker' ),
+					'version'    => '2.1.3',
+					'in_footer'  => true,
+				),
+				'carousel-slider-admin' => array(
+					'src'        => CAROUSEL_SLIDER_ASSETS . '/js/admin' . $suffix . '.js',
+					'dependency' => array(
+						'jquery',
+						'select2',
+						'wp-color-picker-alpha',
+						'jquery-ui-accordion',
+						'jquery-ui-datepicker',
+						'jquery-ui-sortable',
+						'jquery-ui-tabs',
+						'jquery-tiptip',
+					),
+					'version'    => CAROUSEL_SLIDER_VERSION,
+					'in_footer'  => true,
+				),
+				'owl-carousel'          => array(
+					'src'        => CAROUSEL_SLIDER_ASSETS . '/lib/owl-carousel/owl.carousel' . $suffix . '.js',
+					'dependency' => array( 'jquery' ),
+					'version'    => '2.2.1',
+					'in_footer'  => true,
+				),
+				'magnific-popup'        => array(
+					'src'        => CAROUSEL_SLIDER_ASSETS . '/lib/magnific-popup/jquery.magnific-popup' . $suffix . '.js',
+					'dependency' => array( 'jquery' ),
+					'version'    => '1.1.0',
+					'in_footer'  => true,
+				),
+			);
+
+			foreach ( $scripts as $handle => $script ) {
+				wp_register_script( $handle, $script['src'], $script['dependency'], $script['version'], $script['in_footer'] );
+			}
+		}
+
 		/**
 		 * Load frontend scripts
 		 */
 		public function frontend_scripts() {
-			wp_register_style(
-				'carousel-slider',
-				CAROUSEL_SLIDER_ASSETS . '/css/style.css',
-				array(),
-				CAROUSEL_SLIDER_VERSION,
-				'all'
-			);
-			wp_register_script(
-				'owl-carousel',
-				CAROUSEL_SLIDER_ASSETS . '/js/vendors/owl.carousel.min.js',
-				array( 'jquery' ),
-				'2.2.1',
-				true
-			);
-			wp_register_script(
-				'magnific-popup',
-				CAROUSEL_SLIDER_ASSETS . '/js/vendors/jquery.magnific-popup.min.js',
-				array(),
-				'1.1.0',
-				true
-			);
-			wp_register_script(
-				'carousel-slider-hero',
-				CAROUSEL_SLIDER_ASSETS . '/js/public/script.js',
-				array(),
-				CAROUSEL_SLIDER_VERSION,
-				true
-			);
-
-			if ( $this->should_load_scripts() ) {
-				wp_enqueue_style( 'carousel-slider' );
-				wp_enqueue_script( 'owl-carousel' );
+			if ( ! $this->should_load_scripts() ) {
+				return;
 			}
+
+			wp_enqueue_style( 'carousel-slider' );
+			wp_enqueue_script( 'owl-carousel' );
 		}
 
 		/**
@@ -73,137 +133,91 @@ if ( ! class_exists( 'Carousel_Slider_Script' ) ):
 		public function admin_scripts( $hook ) {
 			global $post;
 
-			if ( $hook == 'post-new.php' || $hook == 'post.php' ) {
+			$_is_carousel = is_a( $post, 'WP_Post' ) && ( 'carousels' == $post->post_type );
+			$_is_doc      = ( 'carousels_page_carousel-slider-documentation' == $hook );
 
-				if ( is_a( $post, 'WP_Post' ) && 'carousels' == $post->post_type ) {
-					wp_enqueue_media();
-					wp_enqueue_style( 'wp-color-picker' );
-					wp_enqueue_style(
-						'carousel-slider-admin',
-						CAROUSEL_SLIDER_ASSETS . '/css/admin.css',
-						array(),
-						CAROUSEL_SLIDER_VERSION,
-						'all'
-					);
-					wp_enqueue_script(
-						'select2',
-						CAROUSEL_SLIDER_ASSETS . '/js/vendors/select2.min.js',
-						array( 'jquery' ),
-						'4.0.3',
-						true
-					);
-					wp_enqueue_script(
-						'tip-tip',
-						CAROUSEL_SLIDER_ASSETS . '/js/vendors/jquery.tipTip.min.js',
-						array( 'jquery' ),
-						CAROUSEL_SLIDER_VERSION,
-						true
-					);
-					wp_enqueue_script(
-						'wp-color-picker-alpha',
-						CAROUSEL_SLIDER_ASSETS . '/js/vendors/wp-color-picker-alpha.min.js',
-						array( 'wp-color-picker' ),
-						'1.2.2',
-						true
-					);
-					wp_enqueue_script(
-						'carousel-slider-admin',
-						CAROUSEL_SLIDER_ASSETS . '/js/admin.min.js',
-						array(
-							'jquery',
-							'wp-color-picker-alpha',
-							'jquery-ui-accordion',
-							'jquery-ui-datepicker',
-							'jquery-ui-sortable',
-							'jquery-ui-tabs',
-							'tip-tip',
-							'select2'
-						),
-						CAROUSEL_SLIDER_VERSION,
-						true
-					);
-				}
+			if ( ! $_is_carousel && ! $_is_doc ) {
+				return;
 			}
+
+			wp_enqueue_media();
+			wp_enqueue_style( 'carousel-slider-admin' );
+			wp_enqueue_script( 'carousel-slider-admin' );
 		}
 
 		/**
 		 * Load front end inline script
 		 */
 		public function inline_script() {
-			if ( $this->should_load_scripts() ):
-				?>
-                <svg width="1" height="1" style="display: none;">
-                    <symbol id="icon-arrow-left" viewBox="0 0 20 20">
-                        <path d="M14 5l-5 5 5 5-1 2-7-7 7-7z"></path>
-                    </symbol>
-                    <symbol id="icon-arrow-right" viewBox="0 0 20 20">
-                        <path d="M6 15l5-5-5-5 1-2 7 7-7 7z"></path>
-                    </symbol>
-                </svg>
-                <script type="text/javascript">
-                    jQuery(document).ready(function ($) {
+			if ( ! $this->should_load_scripts() ) {
+				return;
+			}
+			?>
+            <script type="text/javascript">
+                (function ($) {
+                    'use strict';
 
-                        $('body').find('.carousel-slider').each(function () {
-                            var _this = $(this);
-                            var isVideo = _this.data('slide-type') === 'video-carousel';
-                            var videoWidth = isVideo ? _this.data('video-width') : false;
-                            var videoHeight = isVideo ? _this.data('video-height') : false;
-                            var autoWidth = _this.data('auto-width');
-                            var stagePadding = parseInt(_this.data('stage-padding'));
-                            autoWidth = isVideo ? isVideo : autoWidth;
-                            stagePadding = stagePadding > 0 ? stagePadding : 0;
+                    $('body').find('.carousel-slider').each(function () {
+                        var _this = $(this);
+                        var isVideo = _this.data('slide-type') === 'video-carousel';
+                        var videoWidth = isVideo ? _this.data('video-width') : false;
+                        var videoHeight = isVideo ? _this.data('video-height') : false;
+                        var autoWidth = _this.data('auto-width');
+                        var stagePadding = parseInt(_this.data('stage-padding'));
+                        autoWidth = isVideo ? isVideo : autoWidth;
+                        stagePadding = stagePadding > 0 ? stagePadding : 0;
 
-                            if (jQuery().owlCarousel) {
-                                _this.owlCarousel({
-                                    stagePadding: stagePadding,
-                                    nav: _this.data('nav'),
-                                    dots: _this.data('dots'),
-                                    margin: _this.data('margin'),
-                                    loop: _this.data('loop'),
-                                    autoplay: _this.data('autoplay'),
-                                    autoplayTimeout: _this.data('autoplay-timeout'),
-                                    autoplaySpeed: _this.data('autoplay-speed'),
-                                    autoplayHoverPause: _this.data('autoplay-hover-pause'),
-                                    slideBy: _this.data('slide-by'),
-                                    lazyLoad: _this.data('lazy-load'),
-                                    video: isVideo,
-                                    videoWidth: videoWidth,
-                                    videoHeight: videoHeight,
-                                    autoWidth: autoWidth,
-                                    navText: [
-                                        '<svg class="carousel-slider-nav-icon" width="48" height="48"><use xlink:href="#icon-arrow-left"></use></svg>',
-                                        '<svg class="carousel-slider-nav-icon" width="48" height="48"><use xlink:href="#icon-arrow-right"></use></svg>'
-                                    ],
-                                    responsive: {
-                                        320: {items: _this.data('colums-mobile')},
-                                        600: {items: _this.data('colums-small-tablet')},
-                                        768: {items: _this.data('colums-tablet')},
-                                        993: {items: _this.data('colums-small-desktop')},
-                                        1200: {items: _this.data('colums-desktop')},
-                                        1921: {items: _this.data('colums')}
-                                    }
-                                });
-                            }
+                        if (jQuery().owlCarousel) {
+                            _this.owlCarousel({
+                                stagePadding: stagePadding,
+                                nav: _this.data('nav'),
+                                dots: _this.data('dots'),
+                                margin: _this.data('margin'),
+                                loop: _this.data('loop'),
+                                autoplay: _this.data('autoplay'),
+                                autoplayTimeout: _this.data('autoplay-timeout'),
+                                autoplaySpeed: _this.data('autoplay-speed'),
+                                autoplayHoverPause: _this.data('autoplay-hover-pause'),
+                                slideBy: _this.data('slide-by'),
+                                lazyLoad: _this.data('lazy-load'),
+                                video: isVideo,
+                                videoWidth: videoWidth,
+                                videoHeight: videoHeight,
+                                autoWidth: autoWidth,
+                                navText: [
+                                    '<svg class="carousel-slider-nav-icon" viewBox="0 0 20 20"><path d="M14 5l-5 5 5 5-1 2-7-7 7-7z"></path></use></svg>',
+                                    '<svg class="carousel-slider-nav-icon" viewBox="0 0 20 20"><path d="M6 15l5-5-5-5 1-2 7 7-7 7z"></path></svg>'
+                                ],
+                                responsive: {
+                                    320: {items: _this.data('colums-mobile')},
+                                    600: {items: _this.data('colums-small-tablet')},
+                                    768: {items: _this.data('colums-tablet')},
+                                    993: {items: _this.data('colums-small-desktop')},
+                                    1200: {items: _this.data('colums-desktop')},
+                                    1921: {items: _this.data('colums')}
+                                }
+                            });
+                        }
 
-                            if (jQuery().magnificPopup) {
-                                var popupType = _this.data('slide-type') === 'product-carousel' ? 'ajax' : 'image';
-                                var popupGallery = _this.data('slide-type') !== 'product-carousel';
-                                $(this).find('.magnific-popup').magnificPopup({
-                                    type: popupType,
-                                    gallery: {
-                                        enabled: popupGallery
-                                    },
-                                    zoom: {
-                                        enabled: popupGallery,
-                                        duration: 300,
-                                        easing: 'ease-in-out'
-                                    }
-                                });
-                            }
-                        });
+                        if (jQuery().magnificPopup) {
+                            var popupType = _this.data('slide-type') === 'product-carousel' ? 'ajax' : 'image';
+                            var popupGallery = _this.data('slide-type') !== 'product-carousel';
+                            $(this).find('.magnific-popup').magnificPopup({
+                                type: popupType,
+                                gallery: {
+                                    enabled: popupGallery
+                                },
+                                zoom: {
+                                    enabled: popupGallery,
+                                    duration: 300,
+                                    easing: 'ease-in-out'
+                                }
+                            });
+                        }
                     });
-                </script><?php
-			endif;
+                })(jQuery);
+            </script>
+			<?php
 		}
 
 		/**

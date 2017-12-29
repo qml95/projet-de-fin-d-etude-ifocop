@@ -1,0 +1,17 @@
+Format,Carte mSATA
+Capacité,120 Go
+Type de mémoire,MLC (Multi-Level Cell)
+Interface,SATA 3 (6Gb/s)
+"Protocole ",AHCI
+Taux de transfert maximal en lecture,550Mo/s
+taux de transfert maximal en écriture,520Mo/s
+IOPS en lecture,86 000
+IOPS en écriture,48 000
+PRÉSENTATION,
+Version boite,Oui
+Dimensions,"50,8 x 29,85 x 3,75 mm
+"
+Poids,"6,86 g
+"
+Référence constructeur	,"SMS200S3/120G
+"

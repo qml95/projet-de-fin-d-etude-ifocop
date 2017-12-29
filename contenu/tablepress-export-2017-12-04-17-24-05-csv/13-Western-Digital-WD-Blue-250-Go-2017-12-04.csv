@@ -1,0 +1,14 @@
+Format,"2,5"""
+Capacité,120 GO
+Type de mémoire,TLC (Triple-Level-Cell)
+Interface,SATA 3 (6Gb/s)
+Taux de transfert maximal en lecture,540 Mo/s
+Taux de transfert maximal en écriture,430Mo/s
+IOPS en lecture,37 000
+IOPS en écriture,64 000
+MBTF,"1,75 million d'heures"
+PRESENTATION,
+Version boite,boite
+Dimensions,"100,20 x 69,85 x 7 mm"
+Poids,"32,5g"
+Référence constructeur,WDS120G1G0A

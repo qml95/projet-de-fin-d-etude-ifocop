@@ -40,6 +40,12 @@ h3{
 .site-title{
 	font-size: 60px !important;
 }
+.yith_woocommerce_ajax_search{
+	  margin-left: 200px !important;
+}
+.cart-contents {
+	margin-bottom: 18px !important;
+}
 
 /*--------------------------------------------------------------------
 														partie page produits
@@ -48,7 +54,9 @@ h3{
 	color: green !important;
 }
 .product_title{
-	width: 380px !important;
+	width: 30em !important;
+	font-size: 2.05em !important;
+	font-weight: bold !important;
 }
 .woocommerce-product-details__short-description{
 	width: 415px !important;

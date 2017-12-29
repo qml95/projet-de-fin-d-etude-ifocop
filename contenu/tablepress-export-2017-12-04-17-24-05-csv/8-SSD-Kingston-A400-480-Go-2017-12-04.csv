@@ -1,0 +1,11 @@
+Format,"2,5"""
+Capacité,480 Go
+Type de mémoire,TLC (Triple-Level Cell)
+Interface,SATA 3 (6Gb/s)
+"Protocole ",AHCI
+Taux de transfert maximal en lecture,500Mo/s
+taux de transfert maximal en écriture,320Mo/s
+PRÉSENTATION,
+Version boite,Oui
+Dimensions,"100 x 69,9 x 7 mm"
+Poids,41 g

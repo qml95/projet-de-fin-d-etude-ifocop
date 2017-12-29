@@ -8,7 +8,7 @@
 }
 
 .wpmenucart-display-standard {
-
+	
 }
 .wpmenucart-display-right {
 	float: right !important;
@@ -23,7 +23,7 @@
 
 .wpmenucart-thumbnail img {
 	width: 32px;
-	height: auto;
+	height: auto;	
 	margin-right: 8px;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
 	-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
@@ -53,5 +53,4 @@
 /* Force Inline Display */
 li.wpmenucartli a.wpmenucart-contents span{
 	display: inline-block !important;
-	
 }

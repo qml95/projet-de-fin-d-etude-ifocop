@@ -349,3 +349,39 @@ Stack trace:
 #4 {main}
   thrown
 
+2017-12-21T13:58:26+00:00 CRITICAL Uncaught Error: Class 'wp_bootstrap_navwalker' not found in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/themes/storefront-child/header.php:54
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template.php(688): require_once()
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template.php(647): load_template('/Users/quentinm...', true)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/themes/storefront-child/woocommerce.php(15): get_header()
+#4 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template-loader.php(74): include('/Users/quentinm...')
+#5 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordp
+
+2017-12-22T12:05:41+00:00 CRITICAL Uncaught Error: Class 'wp_bootstrap_navwalker' not found in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/themes/storefront-child/header.php:54
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template.php(688): require_once()
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template.php(647): load_template('/Users/quentinm...', true)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/themes/storefront-child/woocommerce.php(15): get_header()
+#4 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template-loader.php(74): include('/Users/quentinm...')
+#5 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordp
+
+2017-12-22T12:06:49+00:00 CRITICAL Uncaught Error: Class 'wp_bootstrap_navwalker' not found in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/themes/storefront-child/header.php:54
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template.php(688): require_once()
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template.php(647): load_template('/Users/quentinm...', true)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/themes/storefront/page.php(13): get_header()
+#4 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template-loader.php(74): include('/Users/quentinm...')
+#5 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-blog-
+
+2017-12-22T12:07:02+00:00 CRITICAL Uncaught Error: Class 'wp_bootstrap_navwalker' not found in /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/themes/storefront-child/header.php:54
+Stack trace:
+#0 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template.php(688): require_once()
+#1 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template.php(647): load_template('/Users/quentinm...', true)
+#2 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/general-template.php(41): locate_template(Array, true)
+#3 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-content/themes/storefront/page.php(13): get_header()
+#4 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-includes/template-loader.php(74): include('/Users/quentinm...')
+#5 /Users/quentinmorino-laudrin/sites/projet-de-fin-d-etude-ifocop/projet_wordpress/wp-blog-
+

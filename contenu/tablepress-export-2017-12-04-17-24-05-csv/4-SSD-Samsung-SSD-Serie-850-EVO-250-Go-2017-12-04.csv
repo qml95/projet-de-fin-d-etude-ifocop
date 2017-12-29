@@ -1,0 +1,18 @@
+Format,"2,5"""
+Capacité,250 Go
+Type de mémoire,V-NAND 3D
+Interface,SATA 3 (6Gb/s)
+Protocole,AHCI
+Taux de transfert maximal en lecture,540 Mo/sec
+Taux de transfert maximal en écriture,520Mo/sec
+IOPS en lecture,97 000
+IOPS en écriture,88 000
+PRÉSENTATION,
+Version boite,Oui
+Accessoire fournis,"Logiciel Magician 
+Guide d'installation"
+Dimensions,"100x 69,85 x 6,8 mm"
+Poids,53g
+Consommation,"En fonctionnement : 2,1W
+En veille : 0,5 W"
+Référence constructeur,MZ-75E250B/EU

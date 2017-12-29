@@ -4,7 +4,7 @@ Tags: woocommerce, shortcode, images, carousel, carousel slider, image carousel,
 Requires at least: 4.5
 Tested up to: 4.9
 Requires PHP: 5.3
-Stable tag: 1.8.2
+Stable tag: 1.8.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -15,15 +15,15 @@ Create SEO friendly Image, Logo, Video, Post, WooCommerce Product Carousel and S
 **Create SEO friendly Image, Logo, Video, Post, WooCommerce Product Carousel and Slider.**
 Carousel Slider is a touch enabled WordPress plugin that lets you create highly customizable, stylish responsive carousel slider. With Carousel Slider, you can create image carousel using media gallery or custom url, post carousel, video carousel. We have integrated [Owl Carousel 2](http://www.owlcarousel.owlgraphic.com/) into our plugin for the ultimate device support.
 
-
 > Looking for a free minimal WordPress theme. Try [Shapla](https://wordpress.org/themes/shapla/)
+
 
 **If you like this plugin, please give us [5 star](https://wordpress.org/support/plugin/carousel-slider/reviews/?rate=5#new-post) to encourage for future improvement.**
 
 
-> What's new in version 1.8.0?
+> What's new in version 1.8?
 
-> **Hero Banner Slider(beta)** with background image, title, description, call to action buttons and more
+> **Hero Banner Slider** with background image, title, description, call to action buttons and more
 > More control over Arrow Navigation
 > More control over Bullet/Dot Navigation
 > Alpha color picker for choosing color
@@ -118,6 +118,14 @@ Now you can use the following function at your theme template file replacing `YO
 7. Front-end example of image lightbox.
 
 == Changelog ==
+
+= version 1.8.3 - 2017-12-08 =
+* Added - Background Overlay color for hero carousel.
+* Added - Ken Burns Effect for hero carousel.
+* Tweak - Update hero carousel style.
+* Removed - Heading and Description background color.
+* Dev - Load non-minified version when script debug is enabled.
+* Dev - Update core code.
 
 = version 1.8.2 - 2017-11-03 =
 * Fixed - Fixed color overlapping issue on WordPress 3.9
